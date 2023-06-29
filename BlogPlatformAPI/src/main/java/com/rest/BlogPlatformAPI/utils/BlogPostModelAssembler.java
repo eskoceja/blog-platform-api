@@ -15,10 +15,10 @@ public class BlogPostModelAssembler implements RepresentationModelAssembler<Blog
     public EntityModel<BlogPost> toModel(BlogPost blogPost) {
         return EntityModel.of(blogPost,
                 linkTo(methodOn(BlogPostController.class).getPostsById(blogPost.getId())).withSelfRel(),
-                linkTo(methodOn(BlogPostController.class).getAllPosts()).withRel("blog-posts"),
+                linkTo(methodOn(BlogPostController.class).getAllPosts()).withRel("blog-posts"));
 //                linkTo(methodOn(BlogPostController.class).createPost(blogPost)).withRel("create"),
-                linkTo(methodOn(BlogPostController.class).updatePost(blogPost.getId(), blogPost)).withRel("update"),
-                linkTo(methodOn(BlogPostController.class).deletePost(blogPost.getId())).withRel("delete")
-                );
+//                linkTo(methodOn(BlogPostController.class).updatePost(blogPost.getId(), blogPost)).withRel("update"),
+//                linkTo(methodOn(BlogPostController.class).deletePost(blogPost.getId())).withRel("delete")
+
     }
 }

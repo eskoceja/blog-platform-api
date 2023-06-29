@@ -18,6 +18,10 @@ public class LoadDatabase {
             blogPostRepository.save(new BlogPost("title 1", "content 1", "author 1"));
             blogPostRepository.save(new BlogPost("title 2", "content 2", "author 2"));
             blogPostRepository.save(new BlogPost("title 3", "content 3", "author 3"));
+
+            blogPostRepository.findAll().forEach(blogPost -> {
+                log.info("Preloaded: " + blogPost);
+            });
         };
     }
 }

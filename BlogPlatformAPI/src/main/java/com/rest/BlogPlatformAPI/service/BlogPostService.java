@@ -18,6 +18,7 @@ public class BlogPostService {
         this.blogPostRepository = blogPostRepository;
     }
 
+    //READ
     public List<BlogPost> getAllPosts() {
         return blogPostRepository.findAll();
     }
@@ -26,10 +27,12 @@ public class BlogPostService {
         return blogPostRepository.findById(id);
     }
 
+    //CREATE
     public BlogPost createPost(BlogPost blogPost) {
         return blogPostRepository.save(blogPost);
     }
 
+    //UPDATE
     public BlogPost updatePost(Long id, BlogPost updatedPost) {
         Optional<BlogPost> post = blogPostRepository.findById(id);
         if (post.isPresent()) {
@@ -43,6 +46,7 @@ public class BlogPostService {
         }
     }
 
+    //DELETE
     public void deletePost(Long id) {
         blogPostRepository.deleteById(id);
     }

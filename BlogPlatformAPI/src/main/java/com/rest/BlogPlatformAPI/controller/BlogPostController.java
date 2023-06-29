@@ -37,7 +37,6 @@ public class BlogPostController {
                 linkTo(methodOn(BlogPostController.class).getAllPosts()).withSelfRel());
     }
 
-
     @GetMapping("/posts/{id}")
     public EntityModel<BlogPost> getPostsById(@PathVariable Long id) { //("id")
         BlogPost blogPost = blogPostService.getPostById(id)

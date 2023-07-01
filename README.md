@@ -41,6 +41,9 @@ each of these packages contain.
     - contains a @RestController annotation, meaning it won't render to a .html file, thus returning exactly how it is formatted in typical APIs or databases online we have worked with before
     - functions with the support of the services AS WELL AS: model assembler and the blog post not found exception (details in utils)
     - where the @GetMapping, @PostMapping, and @PutMapping functionality is provided along with the corresponding links to each functionality
+  - BlogPostThymeController
+    - contains the @Controller annotation to render a more visually appealing way to make requests
+    - the pages are in the templates folder in resources, and you will also find bootstrap integration! Cool stuff!
 - Utils Package (this is where it gets interesting)
   - BlogPostModelAssembler class
     - this is where we enhance the REST features by calling in HATEOS
@@ -91,7 +94,10 @@ What's cool is that you can manipulate data on the h2-console or command line an
 
 ### For the client -  a visual appealing page to make requests
 
-To see the action in the form of a page, visit http://localhost:8080/view where the client or user will be able to create, read, update, and delete posts. You should also be able to see the data in the h2 in-memory database. *Note:* There are some hard coded posts you will see when you pull up the pages, those too can be manipulated but will automatically re-populate when you rerun the program.
+To see the action in the form of a page, visit http://localhost:8080/view where the client or user will be able to create, 
+read, update, and delete posts. You should also be able to see the data in the h2 in-memory database. *Note:* There are 
+some hard coded posts you will see when you pull up the pages, those too can be manipulated but will automatically 
+re-populate when you rerun the program.
 
 ---------------------------------------------------------------------------
 [Helpful Link](https://spring.io/guides/tutorials/rest/), Thanks Hector!

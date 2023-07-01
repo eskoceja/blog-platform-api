@@ -15,9 +15,9 @@ public class LoadDatabase {
     @Bean
     CommandLineRunner initDatabase(BlogPostRepository blogPostRepository) {
         return args -> {
-            blogPostRepository.save(new BlogPost("title 1", "content 1", "author 1"));
-            blogPostRepository.save(new BlogPost("title 2", "content 2", "author 2"));
-            blogPostRepository.save(new BlogPost("title 3", "content 3", "author 3"));
+            blogPostRepository.save(new BlogPost("The Art Of Cooking", "Content about the art of cooking.", "John Smith"));
+            blogPostRepository.save(new BlogPost("Exploring The Wonders Of Nature", "Content about the wonders of nature.", "Emily Johnson"));
+            blogPostRepository.save(new BlogPost("The Power Of Mindfulness", "Content about mindfulness.", "Sarah Thompson"));
 
             blogPostRepository.findAll().forEach(blogPost -> {
                 log.info("Preloaded: " + blogPost);

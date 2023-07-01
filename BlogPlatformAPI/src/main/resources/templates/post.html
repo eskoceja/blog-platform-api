@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Post</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-body-secondary">
+
+<div class="card w-75 mb-3">
+    <div class="card-body">
+        <h3 class="card-title">Blog Post</h3>
+
+        <div class="card-body">
+            <h5 class="card-title" th:text="${blogPost.title}"></h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary" th:text="${blogPost.author}"></h6>
+            <p th:text="${blogPost.id}"></p>
+            <p class="card-text" th:text="${blogPost.content}"></p>
+            <a th:href="@{/view/update/{id}(id=${blogPost.id})}" class="card-link">
+                <button class="btn btn-primary">Update</button>
+            </a>
+            <a th:href="@{/view/delete/{id}(id=${blogPost.id})}" class="card-link">
+                <button class="btn btn-danger">Delete</button>
+            </a>
+        </div>
+
+    </div>
+</div>
+<a class="btn btn-primary" th:href="@{/view}">Back to Posts</a>
+
+</body>
+</html>

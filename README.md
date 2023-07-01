@@ -89,6 +89,10 @@ view all entries and an individual one for each entry with their corresponding i
 <br><br>
 What's cool is that you can manipulate data on the h2-console or command line and see the manipulation of data real-time!
 
+### For the client -  a visual appealing page to make requests
+
+To see the action in the form of a page, visit http://localhost:8080/view where the client or user will be able to create, read, update, and delete posts. You should also be able to see the data in the h2 in-memory database. *Note:* There are some hard coded posts you will see when you pull up the pages, those too can be manipulated but will automatically re-populate when you rerun the program.
+
 ---------------------------------------------------------------------------
 [Helpful Link](https://spring.io/guides/tutorials/rest/), Thanks Hector!
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Form</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-body-secondary">
+
+<div class="card w-75 mb-3">
+    <div class="card-body">
+        <h3 class="card-title">Update Blog Post</h3>
+
+        <form class="p-3" method="post" th:action="@{/view/{id}(id=${blogPost.id})}">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" class="form-control" id="title" name="title" th:value="${blogPost.title}"
+                       required/><br>
+            </div>
+            <div class="form-group">
+                <label for="content">Content:</label>
+                <textarea class="form-control" id="content" name="content" required
+                          th:text="${blogPost.content}"></textarea>
+                <br>
+            </div>
+
+            <div class="form-group">
+                <label for="author">Author:</label>
+                <input type="text" class="form-control" id="author" name="author" th:value="${blogPost.author}"
+                       required/><br>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Save"/>
+            <a th:href="@{/view}"
+               class="btn btn-outline-secondary">Cancel</a>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
